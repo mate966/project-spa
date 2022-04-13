@@ -1,0 +1,16 @@
+.header {
+    padding: 20px 0;
+    position: relative;
+}
+
+.header__content {
+    width: 90%;
+}
+
+.flowers {
+    position: absolute;
+    top: 35px;
+    left: -10px;
+    width: 60px;
+    z-index: -1;
+}

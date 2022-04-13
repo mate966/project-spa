@@ -1,6 +1,9 @@
 @import "./settings/variables";
+@import "./settings/typography";
 @import "./settings/normalize";
 @import "./settings/wrapper";
 @import "./settings/mixins";
+@import "./settings/breakpoints";
 
 @import "./layout/nav";
+@import "./layout/header";

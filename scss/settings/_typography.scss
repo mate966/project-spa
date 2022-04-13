@@ -1,0 +1,20 @@
+.heading {
+    margin: 10px 0;
+    line-height: 58px;
+    font-weight: 700;
+    font-size: $baseline * 3 + 2;
+    font-family: $secondary-f;
+    color: $secondary-c;
+}
+
+.subheading {
+    letter-spacing: 2px;
+    font-size: $baseline;
+    font-family: $secondary-f;
+    color: $text-c;
+}
+
+.paragraph {
+    font-size: $baseline + 9;
+    color: #555;
+}
