@@ -14,11 +14,40 @@
     max-width: 55px;
 }
 
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 700px;
+    max-height: 100%;
+    background-color: $primary-c;
+    transition: $transition-t;
+
+    &.active {
+        right: 0;
+    }
+
+    a {
+        margin: $baseline * 2 $baseline * 3;
+        font-size: $baseline * 2;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+    }
+}
+
 .burger {
+    position: relative;
     display: flex;
     align-items: center;
     width: 30px;
     height: 25px;
+    z-index: 10;
 }
 
 .burger-line {
@@ -49,26 +78,16 @@
     }
 }
 
-.burger--active .burger-line {
+.active .burger-line {
     background-color: transparent;
 }
 
-// .burger > .burger-line::after {
-//     @include burger-animate(10, rotate(0deg), top 0.5s ease-in-out 0.5s transform 0.5s ease-in-out);
-// }
-
-// .burger > .burger-line::before {
-//     @include burger-animate(10, rotate(0deg), top 0.5s ease-in-out 0.5s transform 0.5s ease-in-out);
-// }
-
-.burger--active > .burger-line::after {
-    @include burger-animate(0, rotate(45deg), top 0.5s ease-in-out transform 0.5s ease-in-out 0.5s);
+.active > .burger-line::before {
+    @include burger-animate(0, rotate(45deg), top 0.5s ease-in-out transform 0.5s);
+    background-color: #fff;
 }
 
-.burger--active > .burger-line::before {
-    @include burger-animate(
-        0,
-        rotate(-45deg),
-        top 0.5s ease-in-out transform 0.5s ease-in-out 0.5s
-    );
+.active > .burger-line::after {
+    @include burger-animate(0, rotate(-45deg), top 0.5s ease-in-out transform 0.5s);
+    background-color: #fff;
 }

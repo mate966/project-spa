@@ -19,6 +19,7 @@ html {
    */
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 /**
@@ -367,7 +368,45 @@ template {
   max-width: 55px;
 }
 
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  height: 700px;
+  max-height: 100%;
+  background-color: #1ba4ce;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.menu.active {
+  right: 0;
+}
+
+.menu a {
+  margin: 32px 48px;
+  font-size: 32px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+
 .burger {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -376,6 +415,7 @@ template {
           align-items: center;
   width: 30px;
   height: 25px;
+  z-index: 10;
 }
 
 .burger-line {
@@ -410,23 +450,25 @@ template {
   transition: 0.4s;
 }
 
-.burger--active .burger-line {
+.active .burger-line {
   background-color: transparent;
 }
 
-.burger--active > .burger-line::after {
+.active > .burger-line::before {
   top: 0;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  -webkit-transition: top 0.5s ease-in-out transform 0.5s ease-in-out 0.5s;
-  transition: top 0.5s ease-in-out transform 0.5s ease-in-out 0.5s;
+  -webkit-transition: top 0.5s ease-in-out transform 0.5s;
+  transition: top 0.5s ease-in-out transform 0.5s;
+  background-color: #fff;
 }
 
-.burger--active > .burger-line::before {
+.active > .burger-line::after {
   top: 0;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  -webkit-transition: top 0.5s ease-in-out transform 0.5s ease-in-out 0.5s;
-  transition: top 0.5s ease-in-out transform 0.5s ease-in-out 0.5s;
+  -webkit-transition: top 0.5s ease-in-out transform 0.5s;
+  transition: top 0.5s ease-in-out transform 0.5s;
+  background-color: #fff;
 }
 /*# sourceMappingURL=main.css.map */
