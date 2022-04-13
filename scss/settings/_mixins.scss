@@ -1,0 +1,5 @@
+@mixin burger-animate($top, $transform, $transition) {
+    top: $top;
+    transform: $transform;
+    transition: $transition;
+} ;
